@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4bc9e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c8a882;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d6a4f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a4d2e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Circular container background (Optional, can be removed for transparency) -->
+  <!-- <circle cx="250" cy="250" r="240" fill="#ffffff" /> -->
+
+  <!-- Abstract Book/Mountain Shape -->
+  <g transform="translate(100, 120)">
+    <!-- Back mountain/book page (Emerald Green Dark) -->
+    <path d="M150 20 L280 250 L20 250 Z" fill="url(#greenGradient)" />
+    
+    <!-- Front stylized peak/page (Gold) - Intersecting to look like a book spine/peak -->
+    <path d="M150 20 L220 250 L80 250 Z" fill="#ffffff" opacity="0.2" />
+    
+    <!-- Gold accent / Sun or Higher Peak implication -->
+    <circle cx="150" cy="60" r="25" fill="url(#goldGradient)" />
+    
+    <!-- Stylized Book Pages forming the right slope -->
+    <path d="M160 80 L260 250 L180 250 Z" fill="url(#goldGradient)" />
+    
+    <!-- Stylized Book Pages forming the left slope -->
+    <path d="M140 80 L40 250 L120 250 Z" fill="url(#goldGradient)" />
+  </g>
+
+  <!-- Base/Foundation (Stylized open book bottom) -->
+  <path d="M120 370 Q250 420 380 370 T 380 390 Q250 440 120 390 Z" fill="url(#greenGradient)" />
+
+  <!-- Text is strictly not requested in the logo mark, but keeping the shape balanced -->
+</svg>
