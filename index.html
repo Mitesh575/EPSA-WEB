@@ -7,45 +7,46 @@
     <title>Everest Periodical Subscription Agency | Premium Academic Journals</title>
     <meta name="description"
         content="Everest Periodical Subscription Agency - Your trusted partner for academic journals and periodicals subscription services. Serving Arts and Science colleges across India for 9+ years.">
+    <!-- SECURITY: Content Security Policy - restricts resource loading to trusted origins -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://wa.me; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <style>
-        /* CSS Variables */
+        /* CSS Variables — Catalogue-aligned palette */
         :root {
-            --primary-green: #1a4d2e;
-            --primary-green-light: #2d6a4f;
-            --primary-green-dark: #0f2d1a;
-            --gold: #c8a882;
-            --gold-light: #d4bc9e;
-            --gold-dark: #a88a62;
+            --primary: #2e3092;
+            --primary-light: #4345b0;
+            --primary-dark: #1c2060;
+            --accent: #ed1c23;
+            --accent-light: #f44a50;
+            --accent-dark: #b01015;
             --white: #ffffff;
             --bg-primary: #ffffff;
-            --bg-secondary: #f8f9fa;
+            --bg-secondary: #e1f3fd;
             --bg-card: #ffffff;
-            --text-primary: #212529;
-            --text-secondary: #495057;
-            --border-color: #e9ecef;
-            --shadow: rgba(0, 0, 0, 0.1);
-            --shadow-dark: rgba(0, 0, 0, 0.2);
+            --text-primary: #221e1f;
+            --text-secondary: #4a4a4a;
+            --border-color: #d6e8f5;
+            --shadow: rgba(46, 48, 146, 0.08);
+            --shadow-dark: rgba(46, 48, 146, 0.16);
         }
 
         [data-theme="dark"] {
-            --primary-green: #2d6a4f;
-            --primary-green-light: #40916c;
-            --primary-green-dark: #1a4d2e;
-            --bg-primary: #1a1a2e;
-            --bg-secondary: #0f172a;
-            /* Deep navy/black for contrast */
-            --bg-card: #1e293b;
-            /* Slate blue-gray for cards */
+            --primary: #4345b0;
+            --primary-light: #5b5dc8;
+            --primary-dark: #2e3092;
+            --bg-primary: #0f1628;
+            --bg-secondary: #1c2735;
+            --bg-card: #1a2236;
             --text-primary: #e2e8f0;
             --text-secondary: #94a3b8;
-            --border-color: #334155;
-            --shadow: rgba(0, 0, 0, 0.5);
-            --shadow-dark: rgba(0, 0, 0, 0.7);
+            --border-color: #2a3a52;
+            --shadow: rgba(0, 0, 0, 0.4);
+            --shadow-dark: rgba(0, 0, 0, 0.6);
         }
 
         /* Reset & Base Styles */
@@ -62,7 +63,7 @@
         body {
             font-family: 'Work Sans', sans-serif;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--text-primary);
             background-color: var(--bg-primary);
             transition: background-color 0.3s ease, color 0.3s ease;
@@ -75,8 +76,8 @@
         h4,
         h5,
         h6 {
-            font-family: 'Crimson Pro', serif;
-            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
             line-height: 1.3;
             color: var(--text-primary);
         }
@@ -88,14 +89,14 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1140px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
             position: relative;
             z-index: 2;
         }
 
-        /* Interactive Background Elements (Bubbles/Particles) */
+        /* Subtle Background Pattern */
         .bg-particles {
             position: fixed;
             top: 0;
@@ -110,13 +111,12 @@
         .particle {
             position: absolute;
             border-radius: 50%;
-            background: rgba(200, 168, 130, 0.1);
-            /* Gold tint */
-            animation: floatParticle 20s infinite linear;
+            background: rgba(46, 48, 146, 0.05);
+            animation: floatParticle 25s infinite linear;
         }
 
         [data-theme="dark"] .particle {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(67, 69, 176, 0.06);
         }
 
         @keyframes floatParticle {
@@ -212,16 +212,16 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(16px);
+            padding: 14px 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px var(--shadow);
+            box-shadow: 0 1px 12px var(--shadow);
             transition: all 0.3s ease;
         }
 
         [data-theme="dark"] .navbar {
-            background: rgba(26, 26, 46, 0.95);
+            background: rgba(15, 22, 40, 0.97);
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -239,19 +239,20 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-green);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 0.5px;
         }
 
         [data-theme="dark"] .navbar-brand {
-            color: var(--gold);
+            color: var(--accent-light);
         }
 
         .logo-mark {
-            height: 50px;
-            width: 50px;
+            height: 46px;
+            width: 46px;
             animation: rotateLogo 20s linear infinite;
             border-radius: 50%;
         }
@@ -268,13 +269,15 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 32px;
             list-style: none;
         }
 
         .nav-links a {
             font-weight: 500;
             position: relative;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
         }
 
         .nav-links a::after {
@@ -284,7 +287,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--gold);
+            background: var(--accent);
             transition: width 0.3s ease;
         }
 
@@ -293,11 +296,11 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary-green);
+            color: var(--primary);
         }
 
         .nav-links a.active {
-            color: var(--primary-green);
+            color: var(--primary);
         }
 
         .nav-links a.active::after {
@@ -305,11 +308,11 @@
         }
 
         [data-theme="dark"] .nav-links a:hover {
-            color: var(--gold);
+            color: var(--accent-light);
         }
 
         [data-theme="dark"] .nav-links a.active {
-            color: var(--gold);
+            color: var(--accent-light);
         }
 
         .mobile-menu-btn {
@@ -322,11 +325,12 @@
 
         .mobile-menu-btn span {
             display: block;
-            width: 25px;
-            height: 3px;
+            width: 24px;
+            height: 2.5px;
             background: var(--text-primary);
             margin: 5px 0;
             transition: 0.3s;
+            border-radius: 2px;
         }
 
         /* Hero Section */
@@ -337,11 +341,21 @@
             justify-content: center;
             text-align: center;
             position: relative;
-            background: linear-gradient(135deg, rgba(26, 77, 46, 0.9) 0%, rgba(15, 45, 26, 0.95) 100%),
-                url('everest_mountain.jpg') center/cover no-repeat fixed;
+            background: linear-gradient(150deg, #1c2060 0%, #2e3092 40%, #1c2735 100%);
             color: var(--white);
-            padding: 100px 20px;
+            padding: 120px 24px 100px;
             overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(225, 243, 253, 0.06) 0%, transparent 70%);
+            pointer-events: none;
         }
 
         /* Interactive Background Canvas for Hero */
@@ -356,83 +370,95 @@
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 860px;
             z-index: 2;
         }
 
         .hero-logo-large {
-            height: 180px;
-            width: 180px;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+            height: 160px;
+            width: 160px;
+            margin-bottom: 28px;
+            filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
             animation: float 3s ease-in-out infinite;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             color: var(--white);
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 12px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
         .hero-company {
-            font-size: 1.5rem;
-            color: var(--gold);
-            font-weight: 700;
-            margin-bottom: 25px;
-            letter-spacing: 2px;
+            font-size: 1.1rem;
+            color: var(--accent-light);
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
             text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
         }
 
         .hero-tagline {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            opacity: 0.9;
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin: 0 auto 36px;
+            opacity: 0.85;
+            line-height: 1.7;
+            font-weight: 300;
         }
 
         .hero-stats {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 24px;
             margin-bottom: 40px;
             flex-wrap: wrap;
         }
 
         .stat-item {
             text-align: center;
-            padding: 15px 25px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease;
+            padding: 16px 28px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: transform 0.3s ease, background 0.3s ease;
         }
 
         .stat-item:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.14);
         }
 
         .stat-number {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--gold);
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #e1f3fd;
             display: block;
         }
 
         .stat-label {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            opacity: 0.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 14px 35px;
-            font-size: 1rem;
+            padding: 14px 36px;
+            font-size: 0.95rem;
             font-weight: 600;
-            border-radius: 50px;
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
             display: inline-flex;
@@ -442,6 +468,8 @@
             border: none;
             position: relative;
             overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.3px;
         }
 
         .btn::before {
@@ -451,7 +479,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
             transition: left 0.5s ease;
         }
 
@@ -460,51 +488,54 @@
         }
 
         .btn-primary {
-            background: var(--gold);
-            color: var(--primary-green-dark);
-            box-shadow: 0 4px 15px rgba(200, 168, 130, 0.4);
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(237, 28, 35, 0.3);
         }
 
         .btn-primary:hover {
-            background: var(--white);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(200, 168, 130, 0.6);
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(237, 28, 35, 0.4);
         }
 
         .btn-secondary {
             background: transparent;
             color: var(--white);
-            border: 2px solid var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.5);
         }
 
         .btn-secondary:hover {
             background: var(--white);
-            color: var(--primary-green);
-            transform: translateY(-3px);
+            color: var(--primary);
+            border-color: var(--white);
+            transform: translateY(-2px);
         }
 
         /* Section Styling */
         section {
-            padding: 100px 0;
+            padding: 96px 0;
             position: relative;
             z-index: 1;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 56px;
         }
 
         .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary-green);
-            margin-bottom: 15px;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 14px;
             position: relative;
             display: inline-block;
+            font-weight: 700;
+            letter-spacing: -0.3px;
         }
 
         [data-theme="dark"] .section-header h2 {
-            color: var(--gold);
+            color: var(--accent-light);
         }
 
         .section-header h2::after {
@@ -513,10 +544,15 @@
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
+            width: 48px;
             height: 3px;
-            background: var(--gold);
+            background: var(--accent);
             border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            margin-top: 8px;
         }
 
         .services {
@@ -525,79 +561,100 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
         }
 
         .service-card {
             background: var(--bg-card);
-            padding: 40px 30px;
-            border-radius: 15px;
+            padding: 36px 28px;
+            border-radius: 12px;
             text-align: center;
-            transition: all 0.4s ease;
+            transition: all 0.35s ease;
             border: 1px solid var(--border-color);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 6px var(--shadow);
+            box-shadow: 0 2px 8px var(--shadow);
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px var(--shadow-dark);
-            border-color: var(--gold);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px var(--shadow-dark);
+            border-color: var(--accent);
+        }
+
+        .service-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
 
         .service-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-light) 100%);
-            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
+            margin: 0 auto 18px;
+            font-size: 1.6rem;
             color: var(--white);
-            transition: transform 0.5s ease;
+            transition: transform 0.4s ease;
         }
 
         .service-card:hover .service-icon {
-            transform: rotateY(180deg);
+            transform: scale(1.08) rotateY(180deg);
         }
 
         /* Features */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
         }
 
         .feature-card {
             background: var(--bg-card);
-            padding: 30px;
+            padding: 32px 28px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
             text-align: center;
         }
 
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
         .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-green);
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: 0 8px 24px var(--shadow);
         }
 
         [data-theme="dark"] .feature-card:hover {
-            border-color: var(--gold);
+            border-color: var(--accent-light);
         }
 
         .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary-green);
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 16px;
         }
 
         [data-theme="dark"] .feature-icon {
-            color: var(--gold);
+            color: var(--accent-light);
         }
 
         /* FAQ */
@@ -605,18 +662,23 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             overflow: hidden;
             transition: all 0.3s ease;
         }
 
+        .faq-item:hover {
+            border-color: var(--primary-light);
+        }
+
         .faq-question {
-            padding: 20px;
+            padding: 18px 22px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
             font-weight: 500;
+            font-size: 0.95rem;
         }
 
         .faq-question:hover {
@@ -627,7 +689,10 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease, padding 0.4s ease;
-            padding: 0 20px;
+            padding: 0 22px;
+            color: var(--text-secondary);
+            font-size: 0.93rem;
+            line-height: 1.7;
         }
 
         .faq-item.active .faq-answer {
@@ -637,28 +702,42 @@
 
         .faq-icon {
             transition: transform 0.3s ease;
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: 700;
         }
 
         .faq-item.active .faq-icon {
             transform: rotate(45deg);
+            color: var(--accent);
         }
 
         /* Contact & Forms */
         .enquiry {
-            background: var(--primary-green);
+            background: linear-gradient(150deg, var(--primary-dark) 0%, var(--primary) 100%);
             color: var(--white);
         }
 
         [data-theme="dark"] .enquiry {
-            background: var(--primary-green-dark);
+            background: linear-gradient(150deg, #0f1628 0%, var(--primary-dark) 100%);
+        }
+
+        .enquiry .section-header h2 {
+            color: white;
+        }
+
+        .enquiry .section-header h2::after {
+            background: var(--accent);
         }
 
         .enquiry-form {
             background: var(--bg-card);
             padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
             color: var(--text-primary);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .form-group {
@@ -680,16 +759,19 @@
 
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
         }
 
         .form-control {
             width: 100%;
-            padding: 12px;
-            border: 2px solid var(--border-color);
+            padding: 11px 14px;
+            border: 1.5px solid var(--border-color);
             border-radius: 8px;
             font-family: inherit;
+            font-size: 0.95rem;
             background: var(--bg-primary);
             color: var(--text-primary);
             transition: all 0.3s;
@@ -697,70 +779,85 @@
 
         .form-control:focus {
             outline: none;
-            border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(200, 168, 130, 0.2);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(46, 48, 146, 0.12);
         }
 
         /* Footer */
         .footer {
-            background: var(--primary-green-dark);
+            background: #1c2735;
             color: var(--white);
-            padding: 50px 0 20px;
+            padding: 48px 0 24px;
             text-align: center;
         }
 
         [data-theme="dark"] .footer {
-            background: #0f172a;
+            background: #0a0f1a;
             border-top: 1px solid var(--border-color);
         }
 
+        .footer h3 {
+            color: var(--white);
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            opacity: 0.85;
+        }
+
         .logo-footer {
-            height: 60px;
-            margin-bottom: 20px;
+            height: 56px;
+            margin-bottom: 16px;
             filter: brightness(0) invert(1);
         }
 
         /* Floating Buttons */
         .floating-container {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 28px;
+            right: 28px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
             z-index: 999;
         }
 
         .float-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
             border: none;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             transition: all 0.3s;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .whatsapp-btn {
             background: #25d366;
             color: white;
+            border-radius: 50%;
             animation: pulse 2s infinite;
         }
 
         .theme-btn {
             background: var(--bg-card);
             color: var(--text-primary);
+            border: 1px solid var(--border-color);
         }
 
         .lang-btn {
-            background: var(--gold);
-            color: var(--primary-green-dark);
-            font-weight: bold;
-            font-size: 0.9rem;
+            background: var(--accent);
+            color: white;
+            font-weight: 700;
+            font-size: 0.8rem;
+            font-family: 'Poppins', sans-serif;
         }
 
         .scroll-progress {
@@ -769,56 +866,13 @@
             left: 0;
             height: 3px;
             width: 0;
-            background: linear-gradient(90deg, var(--gold), var(--primary-green-light));
+            background: linear-gradient(90deg, var(--accent), var(--primary-light));
             z-index: 1200;
             transition: width 0.1s linear;
         }
 
-        .quote-estimator {
-            margin: 0 0 24px;
-            padding: 20px;
-            border-radius: 12px;
-            border: 1px dashed var(--border-color);
-            background: var(--bg-secondary);
-        }
-
-        .quote-estimator h3 {
-            margin-bottom: 12px;
-            color: var(--primary-green);
-            font-size: 1.25rem;
-        }
-
-        [data-theme="dark"] .quote-estimator h3 {
-            color: var(--gold);
-        }
-
-        .range-label {
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .range-control {
-            width: 100%;
-            accent-color: var(--primary-green);
-        }
-
-        [data-theme="dark"] .range-control {
-            accent-color: var(--gold);
-        }
-
-        .estimator-result {
-            margin-top: 12px;
-            font-size: 1.05rem;
-        }
-
-        .estimator-note {
-            margin-top: 8px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
         .float-btn:hover {
-            transform: scale(1.1);
+            transform: scale(1.08);
         }
 
         /* Responsive */
@@ -832,7 +886,8 @@
                 background: var(--bg-card);
                 flex-direction: column;
                 padding: 20px;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+                gap: 16px;
             }
 
             .nav-links.active {
@@ -844,32 +899,63 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
             .hero-stats {
-                gap: 20px;
+                gap: 16px;
+            }
+
+            .hero-company {
+                font-size: 0.95rem;
+                letter-spacing: 2px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 64px 0;
+            }
+
+            .section-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .enquiry-form {
+                padding: 24px 20px;
+            }
+
+            .stat-item {
+                padding: 12px 20px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 
-    <body>
+<body>
     <div class="scroll-progress" id="scrollProgress"></div>
 
     <!-- Reusable Everest Logo SVG -->
     <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
         <symbol id="everest-logo" viewBox="0 0 120 120">
-            <circle cx="60" cy="60" r="56" fill="var(--bg-primary)" stroke="var(--gold)" stroke-width="4" />
+            <circle cx="60" cy="60" r="56" fill="var(--bg-primary)" stroke="var(--accent)" stroke-width="4" />
             <!-- Open book -->
-            <path d="M25 78 Q60 60 95 78 L95 90 Q60 72 25 90 Z" fill="var(--primary-green)" stroke="var(--gold)"
+            <path d="M25 78 Q60 60 95 78 L95 90 Q60 72 25 90 Z" fill="var(--primary)" stroke="var(--accent)"
                 stroke-width="2" />
             <!-- Mountain peak -->
-            <path d="M35 78 L60 32 L85 78 Z" fill="var(--primary-green-light)" stroke="var(--gold)" stroke-width="2" />
+            <path d="M35 78 L60 32 L85 78 Z" fill="var(--primary-light)" stroke="var(--accent)" stroke-width="2" />
             <!-- Ridge lines -->
-            <path d="M60 32 L60 78" stroke="var(--gold)" stroke-width="2" />
-            <path d="M47 55 L60 78" stroke="var(--gold)" stroke-width="2" />
-            <path d="M73 55 L60 78" stroke="var(--gold)" stroke-width="2" />
+            <path d="M60 32 L60 78" stroke="var(--accent)" stroke-width="2" />
+            <path d="M47 55 L60 78" stroke="var(--accent)" stroke-width="2" />
+            <path d="M73 55 L60 78" stroke="var(--accent)" stroke-width="2" />
         </symbol>
     </svg>
 
@@ -891,7 +977,7 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#enquiry" style="color: var(--gold);">Enquiry</a></li>
+                <li><a href="#enquiry" style="color: var(--accent); font-weight: 600;">Enquiry</a></li>
             </ul>
             <button class="mobile-menu-btn" onclick="toggleMenu()">
                 <span></span><span></span><span></span>
@@ -910,7 +996,8 @@
 
             <div class="hero-company" id="heroCompany">Everest Periodical Subscription Agency</div>
             <h1 id="heroTitle">Empowering Academic Excellence</h1>
-            <p class="hero-tagline" id="heroTagline">Providing 250+ premium journals to Arts & Science colleges across India. Trusted
+            <p class="hero-tagline" id="heroTagline">Providing 250+ premium journals to Arts & Science colleges across
+                India. Trusted
                 partner for over 9 years.</p>
 
             <div class="hero-stats">
@@ -999,7 +1086,7 @@
             <div class="section-header">
                 <h2>Frequently Asked Questions</h2>
             </div>
-            <div style="max-width: 800px; margin: 0 auto;">
+            <div style="max-width: 720px; margin: 0 auto;">
                 <div class="faq-item">
                     <div class="faq-question">
                         How do I subscribe? <span class="faq-icon">+</span>
@@ -1034,79 +1121,65 @@
     <section class="enquiry" id="enquiry">
         <div class="container">
             <div class="section-header">
-                <h2 style="color: white;">Get a Quote</h2>
+                <h2>Get a Quote</h2>
             </div>
             <form class="enquiry-form" onsubmit="event.preventDefault(); sendEnquiry();">
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Contact Person</label>
-                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        <label for="name">Contact Person</label>
+                        <!-- SECURITY: maxlength prevents oversized input; pattern allows letters, spaces, dots -->
+                        <input type="text" id="name" class="form-control" placeholder="Your Name" required
+                            maxlength="100" minlength="2" pattern="[A-Za-z .'-]+" autocomplete="name">
                     </div>
                     <div class="form-group">
-                        <label>Designation</label>
+                        <label for="designation">Designation</label>
                         <input type="text" id="designation" class="form-control"
-                            placeholder="e.g. Librarian / Principal" required>
+                            placeholder="e.g. Librarian / Principal" required maxlength="100" minlength="2">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Institution Name</label>
+                        <label for="institution">Institution Name</label>
                         <input type="text" id="institution" class="form-control" placeholder="College / School Name"
-                            required>
+                            required maxlength="200" minlength="2">
                     </div>
                     <div class="form-group">
-                        <label>Department</label>
+                        <label for="department">Department</label>
                         <input type="text" id="department" class="form-control"
-                            placeholder="e.g. Library / Science Dept">
+                            placeholder="e.g. Library / Science Dept" maxlength="100">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Mobile Number</label>
-                        <input type="tel" id="mobile" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+                        <label for="mobile">Mobile Number</label>
+                        <!-- SECURITY: pattern restricts to valid phone formats -->
+                        <input type="tel" id="mobile" class="form-control" placeholder="+91 XXXXX XXXXX" required
+                            maxlength="15" minlength="10" pattern="[+]?[0-9 -]{10,15}">
                     </div>
                     <div class="form-group">
-                        <label>Email ID</label>
-                        <input type="email" id="email" class="form-control" placeholder="name@college.edu" required>
+                        <label for="email">Email ID</label>
+                        <!-- SECURITY: type="email" provides built-in format validation -->
+                        <input type="email" id="email" class="form-control" placeholder="name@college.edu" required
+                            maxlength="254" autocomplete="email">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Institution Address</label>
-                    <textarea id="address" class="form-control" rows="2"
-                        placeholder="For sending catalog/quotation"></textarea>
+                    <label for="address">Institution Address</label>
+                    <textarea id="address" class="form-control" rows="2" placeholder="For sending catalog/quotation"
+                        maxlength="500"></textarea>
                 </div>
 
                 <div class="form-group">
-                    <label>Subscription Requirements</label>
+                    <label for="requirements">Subscription Requirements</label>
                     <textarea id="requirements" class="form-control" rows="4"
-                        placeholder="List of journals or specific subjects..."></textarea>
+                        placeholder="List of journals or specific subjects..." maxlength="2000"></textarea>
                 </div>
 
-                <div class="quote-estimator">
-                    <h3 id="estimatorTitle">Quick Quote Estimator</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="range-label" id="journalCountLabel">Number of Journals: <span id="journalCountValue">25</span></label>
-                            <input type="range" id="journalCount" class="range-control" min="10" max="300" step="5" value="25">
-                        </div>
-                        <div class="form-group">
-                            <label id="serviceTierLabel">Plan Type</label>
-                            <select id="serviceTier" class="form-control">
-                                <option value="basic">Basic Access</option>
-                                <option value="standard" selected>Standard Academic</option>
-                                <option value="premium">Premium Research</option>
-                            </select>
-                        </div>
-                    </div>
-                    <p class="estimator-result">Estimated annual plan: <strong id="estimateValue">INR 45,000</strong></p>
-                    <p class="estimator-note" id="estimateNote">This is an approximate estimate. Final pricing depends on selected titles and publisher rates.</p>
-                </div>
-
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    <span style="font-size: 1.2rem;">🚀</span> Send Enquiry via WhatsApp
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                    <span style="font-size: 1.1rem;">📩</span> Send Enquiry via WhatsApp
                 </button>
             </form>
         </div>
@@ -1121,13 +1194,13 @@
             </svg>
 
             <h3>Everest Periodical Subscription Agency</h3>
-            <p>"9 Years of Trust & Performance"</p>
-            <br>
+            <p style="color: var(--accent-light); font-weight: 500; margin-bottom: 16px;">"9 Years of Trust &
+                Performance"</p>
             <p><strong>Head Office:</strong> No.8, Brindavan Flat, Madipakkam, Chennai - 600 091</p>
             <p><strong>Phone:</strong> 044-61321926 | <strong>Mobile:</strong> 9940089068</p>
             <p><strong>Email:</strong> everestch91@gmail.com</p>
             <br>
-            <p style="opacity: 0.7; font-size: 0.9rem;">&copy; 2026 EPSA. All Rights Reserved.</p>
+            <p style="opacity: 0.5; font-size: 0.85rem;">&copy; 2026 EPSA. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -1135,7 +1208,8 @@
     <div class="floating-container">
         <button class="float-btn lang-btn" onclick="toggleLang()" id="langToggle">EN</button>
         <button class="float-btn theme-btn" onclick="toggleTheme()" id="themeIcon">🌙</button>
-        <a href="https://wa.me/919940089068" target="_blank" class="float-btn whatsapp-btn">
+        <!-- SECURITY: rel="noopener noreferrer" prevents tab-nabbing attacks on external links -->
+        <a href="https://wa.me/919940089068" target="_blank" rel="noopener noreferrer" class="float-btn whatsapp-btn">
             <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                 <path
                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -1179,14 +1253,14 @@
 
         function init() {
             particlesArray = [];
-            let numberOfParticles = (canvas.height * canvas.width) / 9000;
+            let numberOfParticles = (canvas.height * canvas.width) / 12000;
             for (let i = 0; i < numberOfParticles; i++) {
-                let size = (Math.random() * 2) + 1;
+                let size = (Math.random() * 2) + 0.5;
                 let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
                 let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-                let directionX = (Math.random() * 0.4) - 0.2;
-                let directionY = (Math.random() * 0.4) - 0.2;
-                let color = 'rgba(255, 255, 255, 0.3)';
+                let directionX = (Math.random() * 0.3) - 0.15;
+                let directionY = (Math.random() * 0.3) - 0.15;
+                let color = 'rgba(225, 243, 253, 0.25)';
 
                 particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
             }
@@ -1209,8 +1283,8 @@
                         ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
                     if (distance < (canvas.width / 7) * (canvas.height / 7)) {
                         opacityValue = 1 - (distance / 20000);
-                        ctx.strokeStyle = 'rgba(255, 255, 255,' + opacityValue + ')';
-                        ctx.lineWidth = 1;
+                        ctx.strokeStyle = 'rgba(225, 243, 253,' + (opacityValue * 0.15) + ')';
+                        ctx.lineWidth = 0.8;
                         ctx.beginPath();
                         ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
                         ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
@@ -1226,36 +1300,6 @@
             init();
         });
 
-        // WhatsApp Enquiry Logic
-        function sendEnquiry() {
-            // Get form values
-            const name = document.getElementById('name').value;
-            const designation = document.getElementById('designation').value;
-            const institution = document.getElementById('institution').value;
-            const department = document.getElementById('department').value;
-            const mobile = document.getElementById('mobile').value;
-            const email = document.getElementById('email').value;
-            const address = document.getElementById('address').value;
-            const requirements = document.getElementById('requirements').value;
-
-            // Construct WhatsApp Message
-            const message = `*New Subscription Enquiry from Website* 📄%0A%0A` +
-                `*👤 Name:* ${name}%0A` +
-                `*🎓 Designation:* ${designation}%0A` +
-                `*🏫 Institution:* ${institution}%0A` +
-                `*📂 Department:* ${department}%0A` +
-                `*📞 Mobile:* ${mobile}%0A` +
-                `*✉️ Email:* ${email}%0A%0A` +
-                `*📍 Address:* ${address}%0A%0A` +
-                `*📝 Requirements:*%0A${requirements}`;
-
-            // Open WhatsApp (using the phone number from footer)
-            const whatsappNumber = "919940089068";
-            const url = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-            window.open(url, '_blank');
-        }
-
         // Initialize Particles
         init();
         animate();
@@ -1266,14 +1310,16 @@
             const themeIcon = document.getElementById('themeIcon');
             const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
             html.setAttribute('data-theme', newTheme);
-            themeIcon.innerText = newTheme === 'light' ? '🌙' : '☀️';
+            themeIcon.innerText = newTheme === 'light' ? '\u263E' : '\u2600';
             localStorage.setItem('theme', newTheme);
         }
 
         // Init Theme
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
-            document.getElementById('themeIcon').innerText = '☀️';
+            document.getElementById('themeIcon').innerText = '\u2600';
+        } else {
+            document.getElementById('themeIcon').innerText = '\u263E';
         }
 
         // FAQ Toggle
@@ -1316,16 +1362,60 @@
 
         stats.forEach(stat => observer.observe(stat));
 
-        // Re-define enquiry action with safe encoding
+        // SECURITY: Secure enquiry handler with input validation, sanitization & rate limiting
+        let _lastSubmitTime = 0;
+
         function sendEnquiry() {
-            const name = document.getElementById('name').value;
-            const designation = document.getElementById('designation').value;
-            const institution = document.getElementById('institution').value;
-            const department = document.getElementById('department').value;
-            const mobile = document.getElementById('mobile').value;
-            const email = document.getElementById('email').value;
-            const address = document.getElementById('address').value;
-            const requirements = document.getElementById('requirements').value;
+            const now = Date.now();
+            if (now - _lastSubmitTime < 10000) {
+                alert('Please wait a few seconds before submitting again.');
+                return;
+            }
+
+            function sanitize(str) {
+                return str.replace(/<[^>]*>/g, '').trim();
+            }
+
+            const name = sanitize(document.getElementById('name').value);
+            const designation = sanitize(document.getElementById('designation').value);
+            const institution = sanitize(document.getElementById('institution').value);
+            const department = sanitize(document.getElementById('department').value);
+            const mobile = sanitize(document.getElementById('mobile').value);
+            const email = sanitize(document.getElementById('email').value);
+            const address = sanitize(document.getElementById('address').value);
+            const requirements = sanitize(document.getElementById('requirements').value);
+
+            const limits = [
+                { field: 'Name', value: name, max: 100, required: true },
+                { field: 'Designation', value: designation, max: 100, required: true },
+                { field: 'Institution', value: institution, max: 200, required: true },
+                { field: 'Department', value: department, max: 100, required: false },
+                { field: 'Mobile', value: mobile, max: 15, required: true },
+                { field: 'Email', value: email, max: 254, required: true },
+                { field: 'Address', value: address, max: 500, required: false },
+                { field: 'Requirements', value: requirements, max: 2000, required: false }
+            ];
+
+            for (const item of limits) {
+                if (item.required && item.value.length === 0) {
+                    alert(`${item.field} is required.`);
+                    return;
+                }
+                if (item.value.length > item.max) {
+                    alert(`${item.field} must be ${item.max} characters or fewer.`);
+                    return;
+                }
+            }
+
+            if (!/^[+]?[0-9 \-]{10,15}$/.test(mobile)) {
+                alert('Please enter a valid mobile number.');
+                return;
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
 
             const message = [
                 '*New Subscription Enquiry from Website*',
@@ -1343,24 +1433,9 @@
 
             const whatsappNumber = '919940089068';
             const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
-        }
+            window.open(url, '_blank', 'noopener,noreferrer');
 
-        // Re-define theme toggle with clean icons
-        function toggleTheme() {
-            const html = document.documentElement;
-            const themeIcon = document.getElementById('themeIcon');
-            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            themeIcon.innerText = newTheme === 'light' ? '🌙' : '☀️';
-            localStorage.setItem('theme', newTheme);
-        }
-
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            document.getElementById('themeIcon').innerText = '☀️';
-        } else {
-            document.getElementById('themeIcon').innerText = '🌙';
+            _lastSubmitTime = now;
         }
 
         // Scroll progress
@@ -1392,112 +1467,18 @@
         }, { threshold: 0.4 });
         pageSections.forEach(section => navObserver.observe(section));
 
-        // Live quote estimator
-        const journalCount = document.getElementById('journalCount');
-        const serviceTier = document.getElementById('serviceTier');
-        const estimateValue = document.getElementById('estimateValue');
-
-        function updateEstimate() {
-            const count = Number(journalCount.value);
-            const tierMultiplier = {
-                basic: 1300,
-                standard: 1800,
-                premium: 2600
-            };
-            const estimate = count * tierMultiplier[serviceTier.value];
-            estimateValue.textContent = `INR ${estimate.toLocaleString('en-IN')}`;
-        }
-
-        function updateJournalCountLabel() {
-            const lang = localStorage.getItem('lang') || 'en';
-            const labelText = lang === 'ta' ? 'ஜர்னல்கள் எண்ணிக்கை: ' : 'Number of Journals: ';
-            document.getElementById('journalCountLabel').innerHTML =
-                `${labelText}<span id="journalCountValue">${journalCount.value}</span>`;
-        }
-
-        journalCount.addEventListener('input', () => {
-            updateJournalCountLabel();
-            updateEstimate();
-        });
-        serviceTier.addEventListener('change', updateEstimate);
-
-        const translations = {
-            en: {
-                heroCompany: 'Everest Periodical Subscription Agency',
-                heroTitle: 'Empowering Academic Excellence',
-                heroTagline: 'Providing 250+ premium journals to Arts & Science colleges across India. Trusted partner for over 9 years.',
-                estimatorTitle: 'Quick Quote Estimator',
-                serviceTierLabel: 'Plan Type',
-                estimateNote: 'This is an approximate estimate. Final pricing depends on selected titles and publisher rates.',
-                langButton: 'EN'
-            },
-            ta: {
-                heroCompany: 'எவரெஸ்ட் பீரியாடிக்கல் சப்ஸ்கிரிப்ஷன் ஏஜென்சி',
-                heroTitle: 'கல்வித் திறனை உயர்த்துகிறோம்',
-                heroTagline: 'இந்தியாவின் கலை மற்றும் அறிவியல் கல்லூரிகளுக்கு 250+ உயர்தர இதழ்கள். 9+ ஆண்டுகளாக நம்பகமான சேவை.',
-                estimatorTitle: 'விரைவு கட்டண மதிப்பீடு',
-                serviceTierLabel: 'திட்ட வகை',
-                estimateNote: 'இது ஒரு தோராயமான மதிப்பீடு. இறுதி கட்டணம் தேர்ந்தெடுக்கப்படும் இதழ்கள் மற்றும் பதிப்பக விகிதங்களைப் பொறுத்தது.',
-                langButton: 'TA'
-            }
-        };
-
-        function applyLanguage(lang) {
-            const t = translations[lang];
-            document.getElementById('heroCompany').textContent = t.heroCompany;
-            document.getElementById('heroTitle').textContent = t.heroTitle;
-            document.getElementById('heroTagline').textContent = t.heroTagline;
-            document.getElementById('estimatorTitle').textContent = t.estimatorTitle;
-            document.getElementById('serviceTierLabel').textContent = t.serviceTierLabel;
-            document.getElementById('estimateNote').textContent = t.estimateNote;
-            document.getElementById('langToggle').textContent = t.langButton;
-            updateJournalCountLabel();
-        }
-
-        function toggleLang() {
-            const current = localStorage.getItem('lang') || 'en';
-            const next = current === 'en' ? 'ta' : 'en';
-            localStorage.setItem('lang', next);
-            applyLanguage(next);
-        }
-
-        applyLanguage(localStorage.getItem('lang') || 'en');
-        updateEstimate();
-
-        // Final language/theme overrides in ASCII-safe literals
-        function toggleTheme() {
-            const html = document.documentElement;
-            const themeIcon = document.getElementById('themeIcon');
-            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            themeIcon.innerText = newTheme === 'light' ? '\u263E' : '\u2600';
-            localStorage.setItem('theme', newTheme);
-        }
-
-        function updateJournalCountLabel() {
-            const lang = localStorage.getItem('lang') || 'en';
-            const labelText = lang === 'ta' ? 'Journals ennikkai: ' : 'Number of Journals: ';
-            document.getElementById('journalCountLabel').innerHTML =
-                `${labelText}<span id="journalCountValue">${journalCount.value}</span>`;
-        }
-
+        // Language toggle
         const uiText = {
             en: {
                 heroCompany: 'Everest Periodical Subscription Agency',
                 heroTitle: 'Empowering Academic Excellence',
                 heroTagline: 'Providing 250+ premium journals to Arts & Science colleges across India. Trusted partner for over 9 years.',
-                estimatorTitle: 'Quick Quote Estimator',
-                serviceTierLabel: 'Plan Type',
-                estimateNote: 'This is an approximate estimate. Final pricing depends on selected titles and publisher rates.',
                 langButton: 'EN'
             },
             ta: {
                 heroCompany: 'Everest Periodical Subscription Agency',
                 heroTitle: 'Kalvi thiranai uyarthukirom',
                 heroTagline: 'Indiavin Arts & Science colleges-kku 250+ premium journals. 9+ andugalaga nambakamana sevai.',
-                estimatorTitle: 'Viraiyu Kattan Mathipidu',
-                serviceTierLabel: 'Thittam Vagai',
-                estimateNote: 'Idhu oru thoraya mathipidu. Iruthi vilai selected journals matrum publisher rates-ai porutthu maarum.',
                 langButton: 'TA'
             }
         };
@@ -1507,11 +1488,7 @@
             document.getElementById('heroCompany').textContent = t.heroCompany;
             document.getElementById('heroTitle').textContent = t.heroTitle;
             document.getElementById('heroTagline').textContent = t.heroTagline;
-            document.getElementById('estimatorTitle').textContent = t.estimatorTitle;
-            document.getElementById('serviceTierLabel').textContent = t.serviceTierLabel;
-            document.getElementById('estimateNote').textContent = t.estimateNote;
             document.getElementById('langToggle').textContent = t.langButton;
-            updateJournalCountLabel();
         }
 
         function toggleLang() {
@@ -1521,15 +1498,7 @@
             applyLanguage(next);
         }
 
-        if (localStorage.getItem('theme') === 'dark') {
-            document.getElementById('themeIcon').innerText = '\u2600';
-        } else {
-            document.getElementById('themeIcon').innerText = '\u263E';
-        }
-
         applyLanguage(localStorage.getItem('lang') || 'en');
-        updateEstimate();
-
     </script>
 </body>
 
