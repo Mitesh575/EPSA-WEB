@@ -611,6 +611,81 @@
             transform: scale(1.08) rotateY(180deg);
         }
 
+        /* About Section */
+        .about {
+            background: var(--bg-primary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        .about-text h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        [data-theme="dark"] .about-text h3 {
+            color: var(--accent-light);
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .highlight-item {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .highlight-item .h-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+        }
+
+        [data-theme="dark"] .highlight-item .h-number {
+            color: var(--accent-light);
+        }
+
+        .highlight-item .h-label {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
         /* Features */
         .features-grid {
             display: grid;
@@ -810,8 +885,8 @@
 
         .logo-footer {
             height: 56px;
+            width: 56px;
             margin-bottom: 16px;
-            filter: brightness(0) invert(1);
         }
 
         /* Floating Buttons */
@@ -946,16 +1021,21 @@
     <!-- Reusable Everest Logo SVG -->
     <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
         <symbol id="everest-logo" viewBox="0 0 120 120">
-            <circle cx="60" cy="60" r="56" fill="var(--bg-primary)" stroke="var(--accent)" stroke-width="4" />
-            <!-- Open book -->
-            <path d="M25 78 Q60 60 95 78 L95 90 Q60 72 25 90 Z" fill="var(--primary)" stroke="var(--accent)"
-                stroke-width="2" />
-            <!-- Mountain peak -->
-            <path d="M35 78 L60 32 L85 78 Z" fill="var(--primary-light)" stroke="var(--accent)" stroke-width="2" />
-            <!-- Ridge lines -->
-            <path d="M60 32 L60 78" stroke="var(--accent)" stroke-width="2" />
-            <path d="M47 55 L60 78" stroke="var(--accent)" stroke-width="2" />
-            <path d="M73 55 L60 78" stroke="var(--accent)" stroke-width="2" />
+            <clipPath id="circle-clip">
+                <circle cx="60" cy="60" r="60" />
+            </clipPath>
+            <g clip-path="url(#circle-clip)">
+                <!-- Sky -->
+                <rect x="0" y="0" width="120" height="120" fill="#006eb6" />
+
+                <!-- Snow Silhouette -->
+                <path d="M-5,85 L28,54 L40,66 L56,38 L76,64 L88,57 L125,86 L125,125 L-5,125 Z" fill="#ffffff" />
+
+                <!-- Rock Silhouette -->
+                <path
+                    d="M-5,90 L25,61 L28,68 L34,61 L40,70 L53,49 L51,62 L58,55 L63,68 L80,62 L72,70 L86,62 L81,75 L125,92 L125,125 L-5,125 Z"
+                    fill="#13105a" />
+            </g>
         </symbol>
     </svg>
 
@@ -973,6 +1053,7 @@
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#faq">FAQ</a></li>
@@ -1022,33 +1103,98 @@
         </div>
     </section>
 
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About EPSA</h2>
+                <p>Your trusted partner for academic journals and periodicals</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Empowering Institutions Since 2017</h3>
+                    <p>Everest Periodical Subscription Agency (EPSA) is a leading subscription agency based in Chennai,
+                        India, dedicated to providing premium academic journals and periodicals to Arts and Science
+                        colleges, universities, and research institutions across the country.</p>
+                    <p>With over 9 years of unwavering trust and performance, we have built strong relationships with
+                        150+ institutions, offering a curated catalogue of 300+ journals spanning every major academic
+                        discipline — from Tamil and English literature to cutting-edge Computer Science and
+                        Biotechnology research.</p>
+                    <p>We partner with renowned publishers to provide SCOPUS-indexed, UGC CARE-listed, and other
+                        peer-reviewed journals, ensuring your library receives only the highest quality academic
+                        resources at competitive prices.</p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <span class="h-number">300+</span>
+                        <span class="h-label">Academic Journals</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="h-number">150+</span>
+                        <span class="h-label">Institutions Served</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="h-number">9+</span>
+                        <span class="h-label">Years of Service</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="h-number">15+</span>
+                        <span class="h-label">Subject Categories</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
                 <h2>Our Subscription Services</h2>
-                <p>Covering a wide spectrum of academic disciplines</p>
+                <p>Covering 300+ journals across every major academic discipline</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🔬</div>
                     <h3>Science</h3>
-                    <p>Physics, Chemistry, Biology, Zoology, Botany</p>
+                    <p>Physics, Chemistry, Biology, Zoology, Botany, Microbiology, Biochemistry & Environmental Science
+                    </p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">💻</div>
-                    <h3>Technology</h3>
-                    <p>Computer Science, AI, Information Tech</p>
+                    <h3>Computer Science</h3>
+                    <p>Web Applications, Data Processing, AI, Network Security, VLSI Design & Software Testing</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📊</div>
-                    <h3>Commerce</h3>
-                    <p>Accounting, Finance, Business Management</p>
+                    <h3>Commerce & Finance</h3>
+                    <p>Accounting, Financial Management, Economics, Corporate Governance & Business Research</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📚</div>
-                    <h3>Literature</h3>
-                    <p>English, Tamil, Modern Languages</p>
+                    <h3>Language & Literature</h3>
+                    <p>Tamil, English, Modern Languages, Linguistics & Literary Research Journals</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📐</div>
+                    <h3>Mathematics</h3>
+                    <p>Applied Mathematics, Statistics, Probability, Cryptography, Geometric Theories & Optimization</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧬</div>
+                    <h3>Life Sciences</h3>
+                    <p>Biotechnology, Agricultural Research, Food Science, Nutrition, Plant Science & Mental Health</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>Education & Social Sciences</h3>
+                    <p>Physical Education, Special Education, Psychology, Sociology, Philosophy & Library Science</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌍</div>
+                    <h3>Multidisciplinary</h3>
+                    <p>Global Impact Journals, Ocean Studies, Geographical Studies, Historical Research & Rural
+                        Development</p>
                 </div>
             </div>
         </div>
@@ -1196,8 +1342,11 @@
             <h3>Everest Periodical Subscription Agency</h3>
             <p style="color: var(--accent-light); font-weight: 500; margin-bottom: 16px;">"9 Years of Trust &
                 Performance"</p>
-            <p><strong>Head Office:</strong> No.8, Brindavan Flat, Madipakkam, Chennai - 600 091</p>
-            <p><strong>Phone:</strong> 044-61321926 | <strong>Mobile:</strong> 9940089068</p>
+            <p><strong>Head Office:</strong> No.8, Brindavan Flat, 1st Floor, Kannan Nagar, 1st Main Road, Madipakkam,
+                Chennai - 600 091</p>
+            <p><strong>Branch Office:</strong> No. 1411, 4th Floor, 1st Block, Arun Exello, Sankara Apartment,
+                Kannapuram Main Road, Kolathur Village, Mambakkam - 600 127</p>
+            <p><strong>Phone:</strong> 044-61321926 | <strong>Mobile:</strong> 9940 089068, 9150125453</p>
             <p><strong>Email:</strong> everestch91@gmail.com</p>
             <br>
             <p style="opacity: 0.5; font-size: 0.85rem;">&copy; 2026 EPSA. All Rights Reserved.</p>
