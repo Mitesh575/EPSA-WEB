@@ -401,16 +401,22 @@
         }
 
         .hero-content {
+            width: 100%;
             max-width: 900px;
             z-index: 2;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
         }
 
         /* Glassmorphic Logo Container */
         .hero-logo-large {
             height: 160px;
             width: 160px;
-            margin-bottom: 32px;
+            display: block;
+            margin: 0 auto 32px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.08);
